@@ -1,0 +1,252 @@
+---
+version: 1
+interactions:
+- request:
+    body: ""
+    form: {}
+    headers: {}
+    url: https://raw.githubusercontent.com/carloscuesta/gitmoji/master/src/data/gitmojis.json
+    method: GET
+  response:
+    body: "{\n  \"gitmojis\": [\n    {\n      \"emoji\": \"\U0001F3A8\",\n      \"entity\":
+      \"&#x1f3a8;\",\n      \"code\": \":art:\",\n      \"description\": \"Improve
+      structure / format of the code.\",\n      \"name\": \"art\",\n      \"semver\":
+      null\n    },\n    {\n      \"emoji\": \"⚡️\",\n      \"entity\": \"&#x26a1;\",\n
+      \     \"code\": \":zap:\",\n      \"description\": \"Improve performance.\",\n
+      \     \"name\": \"zap\",\n      \"semver\": \"patch\"\n    },\n    {\n      \"emoji\":
+      \"\U0001F525\",\n      \"entity\": \"&#x1f525;\",\n      \"code\": \":fire:\",\n
+      \     \"description\": \"Remove code or files.\",\n      \"name\": \"fire\",\n
+      \     \"semver\": null\n    },\n    {\n      \"emoji\": \"\U0001F41B\",\n      \"entity\":
+      \"&#x1f41b;\",\n      \"code\": \":bug:\",\n      \"description\": \"Fix a bug.\",\n
+      \     \"name\": \"bug\",\n      \"semver\": \"patch\"\n    },\n    {\n      \"emoji\":
+      \"\U0001F691️\",\n      \"entity\": \"&#128657;\",\n      \"code\": \":ambulance:\",\n
+      \     \"description\": \"Critical hotfix.\",\n      \"name\": \"ambulance\",\n
+      \     \"semver\": \"patch\"\n    },\n    {\n      \"emoji\": \"✨\",\n      \"entity\":
+      \"&#x2728;\",\n      \"code\": \":sparkles:\",\n      \"description\": \"Introduce
+      new features.\",\n      \"name\": \"sparkles\",\n      \"semver\": \"minor\"\n
+      \   },\n    {\n      \"emoji\": \"\U0001F4DD\",\n      \"entity\": \"&#x1f4dd;\",\n
+      \     \"code\": \":memo:\",\n      \"description\": \"Add or update documentation.\",\n
+      \     \"name\": \"memo\",\n      \"semver\": null\n    },\n    {\n      \"emoji\":
+      \"\U0001F680\",\n      \"entity\": \"&#x1f680;\",\n      \"code\": \":rocket:\",\n
+      \     \"description\": \"Deploy stuff.\",\n      \"name\": \"rocket\",\n      \"semver\":
+      null\n    },\n    {\n      \"emoji\": \"\U0001F484\",\n      \"entity\": \"&#ff99cc;\",\n
+      \     \"code\": \":lipstick:\",\n      \"description\": \"Add or update the
+      UI and style files.\",\n      \"name\": \"lipstick\",\n      \"semver\": \"patch\"\n
+      \   },\n    {\n      \"emoji\": \"\U0001F389\",\n      \"entity\": \"&#127881;\",\n
+      \     \"code\": \":tada:\",\n      \"description\": \"Begin a project.\",\n
+      \     \"name\": \"tada\",\n      \"semver\": null\n    },\n    {\n      \"emoji\":
+      \"✅\",\n      \"entity\": \"&#x2705;\",\n      \"code\": \":white_check_mark:\",\n
+      \     \"description\": \"Add, update, or pass tests.\",\n      \"name\": \"white-check-mark\",\n
+      \     \"semver\": null\n    },\n    {\n      \"emoji\": \"\U0001F512️\",\n      \"entity\":
+      \"&#x1f512;\",\n      \"code\": \":lock:\",\n      \"description\": \"Fix security
+      issues.\",\n      \"name\": \"lock\",\n      \"semver\": \"patch\"\n    },\n
+      \   {\n      \"emoji\": \"\U0001F510\",\n      \"entity\": \"&#x1f510;\",\n
+      \     \"code\": \":closed_lock_with_key:\",\n      \"description\": \"Add or
+      update secrets.\",\n      \"name\": \"closed-lock-with-key\",\n      \"semver\":
+      null\n    },\n    {\n      \"emoji\": \"\U0001F516\",\n      \"entity\": \"&#x1f516;\",\n
+      \     \"code\": \":bookmark:\",\n      \"description\": \"Release / Version
+      tags.\",\n      \"name\": \"bookmark\",\n      \"semver\": null\n    },\n    {\n
+      \     \"emoji\": \"\U0001F6A8\",\n      \"entity\": \"&#x1f6a8;\",\n      \"code\":
+      \":rotating_light:\",\n      \"description\": \"Fix compiler / linter warnings.\",\n
+      \     \"name\": \"rotating-light\",\n      \"semver\": null\n    },\n    {\n
+      \     \"emoji\": \"\U0001F6A7\",\n      \"entity\": \"&#x1f6a7;\",\n      \"code\":
+      \":construction:\",\n      \"description\": \"Work in progress.\",\n      \"name\":
+      \"construction\",\n      \"semver\": null\n    },\n    {\n      \"emoji\": \"\U0001F49A\",\n
+      \     \"entity\": \"&#x1f49a;\",\n      \"code\": \":green_heart:\",\n      \"description\":
+      \"Fix CI Build.\",\n      \"name\": \"green-heart\",\n      \"semver\": null\n
+      \   },\n    {\n      \"emoji\": \"⬇️\",\n      \"entity\": \"⬇️\",\n      \"code\":
+      \":arrow_down:\",\n      \"description\": \"Downgrade dependencies.\",\n      \"name\":
+      \"arrow-down\",\n      \"semver\": \"patch\"\n    },\n    {\n      \"emoji\":
+      \"⬆️\",\n      \"entity\": \"⬆️\",\n      \"code\": \":arrow_up:\",\n      \"description\":
+      \"Upgrade dependencies.\",\n      \"name\": \"arrow-up\",\n      \"semver\":
+      \"patch\"\n    },\n    {\n      \"emoji\": \"\U0001F4CC\",\n      \"entity\":
+      \"&#x1F4CC;\",\n      \"code\": \":pushpin:\",\n      \"description\": \"Pin
+      dependencies to specific versions.\",\n      \"name\": \"pushpin\",\n      \"semver\":
+      \"patch\"\n    },\n    {\n      \"emoji\": \"\U0001F477\",\n      \"entity\":
+      \"&#x1f477;\",\n      \"code\": \":construction_worker:\",\n      \"description\":
+      \"Add or update CI build system.\",\n      \"name\": \"construction-worker\",\n
+      \     \"semver\": null\n    },\n    {\n      \"emoji\": \"\U0001F4C8\",\n      \"entity\":
+      \"&#x1F4C8;\",\n      \"code\": \":chart_with_upwards_trend:\",\n      \"description\":
+      \"Add or update analytics or track code.\",\n      \"name\": \"chart-with-upwards-trend\",\n
+      \     \"semver\": \"patch\"\n    },\n    {\n      \"emoji\": \"♻️\",\n      \"entity\":
+      \"&#x2672;\",\n      \"code\": \":recycle:\",\n      \"description\": \"Refactor
+      code.\",\n      \"name\": \"recycle\",\n      \"semver\": null\n    },\n    {\n
+      \     \"emoji\": \"➕\",\n      \"entity\": \"&#10133;\",\n      \"code\": \":heavy_plus_sign:\",\n
+      \     \"description\": \"Add a dependency.\",\n      \"name\": \"heavy-plus-sign\",\n
+      \     \"semver\": \"patch\"\n    },\n    {\n      \"emoji\": \"➖\",\n      \"entity\":
+      \"&#10134;\",\n      \"code\": \":heavy_minus_sign:\",\n      \"description\":
+      \"Remove a dependency.\",\n      \"name\": \"heavy-minus-sign\",\n      \"semver\":
+      \"patch\"\n    },\n    {\n      \"emoji\": \"\U0001F527\",\n      \"entity\":
+      \"&#x1f527;\",\n      \"code\": \":wrench:\",\n      \"description\": \"Add
+      or update configuration files.\",\n      \"name\": \"wrench\",\n      \"semver\":
+      \"patch\"\n    },\n    {\n      \"emoji\": \"\U0001F528\",\n      \"entity\":
+      \"&#128296;\",\n      \"code\": \":hammer:\",\n      \"description\": \"Add
+      or update development scripts.\",\n      \"name\": \"hammer\",\n      \"semver\":
+      null\n    },\n    {\n      \"emoji\": \"\U0001F310\",\n      \"entity\": \"&#127760;\",\n
+      \     \"code\": \":globe_with_meridians:\",\n      \"description\": \"Internationalization
+      and localization.\",\n      \"name\": \"globe-with-meridians\",\n      \"semver\":
+      \"patch\"\n    },\n    {\n      \"emoji\": \"✏️\",\n      \"entity\": \"&#59161;\",\n
+      \     \"code\": \":pencil2:\",\n      \"description\": \"Fix typos.\",\n      \"name\":
+      \"pencil2\",\n      \"semver\": \"patch\"\n    },\n    {\n      \"emoji\": \"\U0001F4A9\",\n
+      \     \"entity\": \"&#58613;\",\n      \"code\": \":poop:\",\n      \"description\":
+      \"Write bad code that needs to be improved.\",\n      \"name\": \"poop\",\n
+      \     \"semver\": null\n    },\n    {\n      \"emoji\": \"⏪️\",\n      \"entity\":
+      \"&#9194;\",\n      \"code\": \":rewind:\",\n      \"description\": \"Revert
+      changes.\",\n      \"name\": \"rewind\",\n      \"semver\": \"patch\"\n    },\n
+      \   {\n      \"emoji\": \"\U0001F500\",\n      \"entity\": \"&#128256;\",\n
+      \     \"code\": \":twisted_rightwards_arrows:\",\n      \"description\": \"Merge
+      branches.\",\n      \"name\": \"twisted-rightwards-arrows\",\n      \"semver\":
+      null\n    },\n    {\n      \"emoji\": \"\U0001F4E6️\",\n      \"entity\": \"&#1F4E6;\",\n
+      \     \"code\": \":package:\",\n      \"description\": \"Add or update compiled
+      files or packages.\",\n      \"name\": \"package\",\n      \"semver\": \"patch\"\n
+      \   },\n    {\n      \"emoji\": \"\U0001F47D️\",\n      \"entity\": \"&#1F47D;\",\n
+      \     \"code\": \":alien:\",\n      \"description\": \"Update code due to external
+      API changes.\",\n      \"name\": \"alien\",\n      \"semver\": \"patch\"\n    },\n
+      \   {\n      \"emoji\": \"\U0001F69A\",\n      \"entity\": \"&#1F69A;\",\n      \"code\":
+      \":truck:\",\n      \"description\": \"Move or rename resources (e.g.: files,
+      paths, routes).\",\n      \"name\": \"truck\",\n      \"semver\": null\n    },\n
+      \   {\n      \"emoji\": \"\U0001F4C4\",\n      \"entity\": \"&#1F4C4;\",\n      \"code\":
+      \":page_facing_up:\",\n      \"description\": \"Add or update license.\",\n
+      \     \"name\": \"page-facing-up\",\n      \"semver\": null\n    },\n    {\n
+      \     \"emoji\": \"\U0001F4A5\",\n      \"entity\": \"&#x1f4a5;\",\n      \"code\":
+      \":boom:\",\n      \"description\": \"Introduce breaking changes.\",\n      \"name\":
+      \"boom\",\n      \"semver\": \"major\"\n    },\n    {\n      \"emoji\": \"\U0001F371\",\n
+      \     \"entity\": \"&#1F371\",\n      \"code\": \":bento:\",\n      \"description\":
+      \"Add or update assets.\",\n      \"name\": \"bento\",\n      \"semver\": \"patch\"\n
+      \   },\n    {\n      \"emoji\": \"♿️\",\n      \"entity\": \"&#9855;\",\n      \"code\":
+      \":wheelchair:\",\n      \"description\": \"Improve accessibility.\",\n      \"name\":
+      \"wheelchair\",\n      \"semver\": \"patch\"\n    },\n    {\n      \"emoji\":
+      \"\U0001F4A1\",\n      \"entity\": \"&#128161;\",\n      \"code\": \":bulb:\",\n
+      \     \"description\": \"Add or update comments in source code.\",\n      \"name\":
+      \"bulb\",\n      \"semver\": null\n    },\n    {\n      \"emoji\": \"\U0001F37B\",\n
+      \     \"entity\": \"&#x1f37b;\",\n      \"code\": \":beers:\",\n      \"description\":
+      \"Write code drunkenly.\",\n      \"name\": \"beers\",\n      \"semver\": null\n
+      \   },\n    {\n      \"emoji\": \"\U0001F4AC\",\n      \"entity\": \"&#128172;\",\n
+      \     \"code\": \":speech_balloon:\",\n      \"description\": \"Add or update
+      text and literals.\",\n      \"name\": \"speech-balloon\",\n      \"semver\":
+      \"patch\"\n    },\n    {\n      \"emoji\": \"\U0001F5C3️\",\n      \"entity\":
+      \"&#128451;\",\n      \"code\": \":card_file_box:\",\n      \"description\":
+      \"Perform database related changes.\",\n      \"name\": \"card-file-box\",\n
+      \     \"semver\": \"patch\"\n    },\n    {\n      \"emoji\": \"\U0001F50A\",\n
+      \     \"entity\": \"&#128266;\",\n      \"code\": \":loud_sound:\",\n      \"description\":
+      \"Add or update logs.\",\n      \"name\": \"loud-sound\",\n      \"semver\":
+      null\n    },\n    {\n      \"emoji\": \"\U0001F507\",\n      \"entity\": \"&#128263;\",\n
+      \     \"code\": \":mute:\",\n      \"description\": \"Remove logs.\",\n      \"name\":
+      \"mute\",\n      \"semver\": null\n    },\n    {\n      \"emoji\": \"\U0001F465\",\n
+      \     \"entity\": \"&#128101;\",\n      \"code\": \":busts_in_silhouette:\",\n
+      \     \"description\": \"Add or update contributor(s).\",\n      \"name\": \"busts-in-silhouette\",\n
+      \     \"semver\": null\n    },\n    {\n      \"emoji\": \"\U0001F6B8\",\n      \"entity\":
+      \"&#128696;\",\n      \"code\": \":children_crossing:\",\n      \"description\":
+      \"Improve user experience / usability.\",\n      \"name\": \"children-crossing\",\n
+      \     \"semver\": \"patch\"\n    },\n    {\n      \"emoji\": \"\U0001F3D7️\",\n
+      \     \"entity\": \"&#1f3d7;\",\n      \"code\": \":building_construction:\",\n
+      \     \"description\": \"Make architectural changes.\",\n      \"name\": \"building-construction\",\n
+      \     \"semver\": null\n    },\n    {\n      \"emoji\": \"\U0001F4F1\",\n      \"entity\":
+      \"&#128241;\",\n      \"code\": \":iphone:\",\n      \"description\": \"Work
+      on responsive design.\",\n      \"name\": \"iphone\",\n      \"semver\": \"patch\"\n
+      \   },\n    {\n      \"emoji\": \"\U0001F921\",\n      \"entity\": \"&#129313;\",\n
+      \     \"code\": \":clown_face:\",\n      \"description\": \"Mock things.\",\n
+      \     \"name\": \"clown-face\",\n      \"semver\": null\n    },\n    {\n      \"emoji\":
+      \"\U0001F95A\",\n      \"entity\": \"&#129370;\",\n      \"code\": \":egg:\",\n
+      \     \"description\": \"Add or update an easter egg.\",\n      \"name\": \"egg\",\n
+      \     \"semver\": \"patch\"\n    },\n    {\n      \"emoji\": \"\U0001F648\",\n
+      \     \"entity\": \"&#8bdfe7;\",\n      \"code\": \":see_no_evil:\",\n      \"description\":
+      \"Add or update a .gitignore file.\",\n      \"name\": \"see-no-evil\",\n      \"semver\":
+      null\n    },\n    {\n      \"emoji\": \"\U0001F4F8\",\n      \"entity\": \"&#128248;\",\n
+      \     \"code\": \":camera_flash:\",\n      \"description\": \"Add or update
+      snapshots.\",\n      \"name\": \"camera-flash\",\n      \"semver\": null\n    },\n
+      \   {\n      \"emoji\": \"⚗️\",\n      \"entity\": \"&#128248;\",\n      \"code\":
+      \":alembic:\",\n      \"description\": \"Perform experiments.\",\n      \"name\":
+      \"alembic\",\n      \"semver\": \"patch\"\n    },\n    {\n      \"emoji\": \"\U0001F50D️\",\n
+      \     \"entity\": \"&#128269;\",\n      \"code\": \":mag:\",\n      \"description\":
+      \"Improve SEO.\",\n      \"name\": \"mag\",\n      \"semver\": \"patch\"\n    },\n
+      \   {\n      \"emoji\": \"\U0001F3F7️\",\n      \"entity\": \"&#127991;\",\n
+      \     \"code\": \":label:\",\n      \"description\": \"Add or update types.\",\n
+      \     \"name\": \"label\",\n      \"semver\": \"patch\"\n    },\n    {\n      \"emoji\":
+      \"\U0001F331\",\n      \"entity\": \"&#127793;\",\n      \"code\": \":seedling:\",\n
+      \     \"description\": \"Add or update seed files.\",\n      \"name\": \"seedling\",\n
+      \     \"semver\": null\n    },\n    {\n      \"emoji\": \"\U0001F6A9\",\n      \"entity\":
+      \"&#x1F6A9;\",\n      \"code\": \":triangular_flag_on_post:\",\n      \"description\":
+      \"Add, update, or remove feature flags.\",\n      \"name\": \"triangular-flag-on-post\",\n
+      \     \"semver\": \"patch\"\n    },\n    {\n      \"emoji\": \"\U0001F945\",\n
+      \     \"entity\": \"&#x1F945;\",\n      \"code\": \":goal_net:\",\n      \"description\":
+      \"Catch errors.\",\n      \"name\": \"goal-net\",\n      \"semver\": \"patch\"\n
+      \   },\n    {\n      \"emoji\": \"\U0001F4AB\",\n      \"entity\": \"&#x1f4ab;\",\n
+      \     \"code\": \":dizzy:\",\n      \"description\": \"Add or update animations
+      and transitions.\",\n      \"name\": \"animation\",\n      \"semver\": \"patch\"\n
+      \   },\n    {\n      \"emoji\": \"\U0001F5D1️\",\n      \"entity\": \"&#x1F5D1;\",\n
+      \     \"code\": \":wastebasket:\",\n      \"description\": \"Deprecate code
+      that needs to be cleaned up.\",\n      \"name\": \"wastebasket\",\n      \"semver\":
+      \"patch\"\n    },\n    {\n      \"emoji\": \"\U0001F6C2\",\n      \"entity\":
+      \"&#x1F6C2;\",\n      \"code\": \":passport_control:\",\n      \"description\":
+      \"Work on code related to authorization, roles and permissions.\",\n      \"name\":
+      \"passport-control\",\n      \"semver\": \"patch\"\n    },\n    {\n      \"emoji\":
+      \"\U0001FA79\",\n      \"entity\": \"&#x1FA79;\",\n      \"code\": \":adhesive_bandage:\",\n
+      \     \"description\": \"Simple fix for a non-critical issue.\",\n      \"name\":
+      \"adhesive-bandage\",\n      \"semver\": \"patch\"\n    },\n    {\n      \"emoji\":
+      \"\U0001F9D0\",\n      \"entity\": \"&#x1F9D0;\",\n      \"code\": \":monocle_face:\",\n
+      \     \"description\": \"Data exploration/inspection.\",\n      \"name\": \"monocle-face\",\n
+      \     \"semver\": null\n    },\n    {\n      \"emoji\": \"⚰️\",\n      \"entity\":
+      \"&#x26B0;\",\n      \"code\": \":coffin:\",\n      \"description\": \"Remove
+      dead code.\",\n      \"name\": \"coffin\",\n      \"semver\": null\n    },\n
+      \   {\n      \"emoji\": \"\U0001F9EA\",\n      \"entity\": \"&#x1F9EA;\",\n
+      \     \"code\": \":test_tube:\",\n      \"description\": \"Add a failing test.\",\n
+      \     \"name\": \"test-tube\",\n      \"semver\": null\n    },\n    {\n      \"emoji\":
+      \"\U0001F454\",\n      \"entity\": \"&#128084;\",\n      \"code\": \":necktie:\",\n
+      \     \"description\": \"Add or update business logic\",\n      \"name\": \"necktie\",\n
+      \     \"semver\": \"patch\"\n    },\n    {\n      \"emoji\": \"\U0001FA7A\",\n
+      \     \"entity\": \"&#x1FA7A;\",\n      \"code\": \":stethoscope:\",\n      \"description\":
+      \"Add or update healthcheck.\",\n      \"name\": \"stethoscope\",\n      \"semver\":
+      null\n    },\n    {\n      \"emoji\": \"\U0001F9F1\",\n      \"entity\": \"&#x1f9f1;\",\n
+      \     \"code\": \":bricks:\",\n      \"description\": \"Infrastructure related
+      changes.\",\n      \"name\": \"bricks\",\n      \"semver\": null\n    },\n    {\n
+      \     \"emoji\": \"\U0001F9D1‍\U0001F4BB\",\n      \"entity\": \"&#129489;&#8205;&#128187;\",\n
+      \     \"code\": \":technologist:\",\n      \"description\": \"Improve developer
+      experience\",\n      \"name\": \"technologist\",\n      \"semver\": null\n    }\n
+      \ ]\n}\n"
+    headers:
+      Accept-Ranges:
+      - bytes
+      Access-Control-Allow-Origin:
+      - '*'
+      Cache-Control:
+      - max-age=300
+      Content-Security-Policy:
+      - default-src 'none'; style-src 'unsafe-inline'; sandbox
+      Content-Type:
+      - text/plain; charset=utf-8
+      Date:
+      - Sun, 24 Apr 2022 05:00:00 GMT
+      Etag:
+      - W/"e326409402d746e25defa66a931a6a9649ec59516c1c664a711512a1453e0435"
+      Expires:
+      - Sun, 24 Apr 2022 05:05:00 GMT
+      Source-Age:
+      - "60"
+      Strict-Transport-Security:
+      - max-age=31536000
+      Vary:
+      - Authorization,Accept-Encoding,Origin
+      Via:
+      - 1.1 varnish
+      X-Cache:
+      - HIT
+      X-Cache-Hits:
+      - "1"
+      X-Content-Type-Options:
+      - nosniff
+      X-Fastly-Request-Id:
+      - bfb36f7000eebb9e7de5f405101ea9080164f002
+      X-Frame-Options:
+      - deny
+      X-Github-Request-Id:
+      - D660:1191:3A67B9:592AAC:6264D7D3
+      X-Served-By:
+      - cache-bos4645-BOS
+      X-Timer:
+      - S1650776401.909547,VS0,VE1
+      X-Xss-Protection:
+      - 1; mode=block
+    status: 200 OK
+    code: 200
+    duration: 230.61028ms
