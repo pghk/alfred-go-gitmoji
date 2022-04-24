@@ -12,6 +12,7 @@ import (
 
 const GithubUrl string = "https://raw.githubusercontent.com"
 const GitmojiIndex string = "carloscuesta/gitmoji/master/src/data/gitmojis.json"
+const IconLibrary string = "joypixels/emoji-assets/master/png/128/"
 
 func getGitmojiList(client *http.Client) string {
 	resp, err := client.Get(GithubUrl + "/" + GitmojiIndex)
@@ -66,3 +67,6 @@ func (g *Gitmoji) iconName() string {
 	return strings.Join(hexes, "-") + ".png"
 }
 
+func (g *Gitmoji) iconFile() string {
+	return GithubUrl + "/" + IconLibrary + g.iconName()
+}
