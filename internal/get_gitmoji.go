@@ -14,24 +14,9 @@ const GithubUrl string = "https://raw.githubusercontent.com"
 const GitmojiIndex string = "carloscuesta/gitmoji/master/src/data/gitmojis.json"
 const IconLibrary string = "joypixels/emoji-assets/master/png/128/"
 
-func getGitmojiList(client *http.Client) string {
-	resp, err := client.Get(GithubUrl + "/" + GitmojiIndex)
-	if err != nil {
-		log.Fatalln(err)
-	}
-	defer func(Body io.ReadCloser) {
-		err := Body.Close()
-		if err != nil {
-			log.Fatalln(err)
-		}
-	}(resp.Body)
-
-	body, err := ioutil.ReadAll(resp.Body)
-	if err != nil {
-		log.Fatalln(err)
-	}
-
-	return string(body)
+func GetGitmoji(client *http.Client) (map[string][]Gitmoji, error) {
+	gitmojiJson := getGitmojiList(client)
+	return toMap(gitmojiJson)
 }
 
 type Gitmoji struct {
@@ -43,7 +28,7 @@ type Gitmoji struct {
 	Semver      interface{} `json:"semver"`
 }
 
-func parseGitmoji(input string) (map[string][]Gitmoji, error) {
+func toMap(input string) (map[string][]Gitmoji, error) {
 	test := map[string][]Gitmoji{}
 	err := json.Unmarshal([]byte(input), &test)
 	return test, err
@@ -69,4 +54,24 @@ func (g *Gitmoji) iconName() string {
 
 func (g *Gitmoji) iconFile() string {
 	return GithubUrl + "/" + IconLibrary + g.iconName()
+}
+
+func getGitmojiList(client *http.Client) string {
+	resp, err := client.Get(GithubUrl + "/" + GitmojiIndex)
+	if err != nil {
+		log.Fatalln(err)
+	}
+	defer func(Body io.ReadCloser) {
+		err := Body.Close()
+		if err != nil {
+			log.Fatalln(err)
+		}
+	}(resp.Body)
+
+	body, err := ioutil.ReadAll(resp.Body)
+	if err != nil {
+		log.Fatalln(err)
+	}
+
+	return string(body)
 }
