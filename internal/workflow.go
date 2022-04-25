@@ -44,3 +44,16 @@ func loadIcon(gitmoji *Gitmoji, client *http.Client) error {
 	_, err = io.Copy(file, resp.Body)
 	return err
 }
+
+func item(gi *Gitmoji) *aw.Item {
+	return wf.NewItem(gi.Description).
+		Autocomplete(gi.Description).
+		Match(gi.Name + " " + gi.Description).
+		Subtitle(gi.Code).
+		Arg(gi.Emoji).
+		Icon(&aw.Icon{
+			Value: wf.CacheDir() + "/" + gi.iconName(),
+			Type:  aw.IconTypeFileIcon,
+		}).
+		Valid(true)
+}
