@@ -24,7 +24,7 @@ func teardown(vcr *recorder.Recorder) {
 }
 
 func Test_getGitmojiList(t *testing.T) {
-	client, vcr := setup("get_gitmoji")
+	client, vcr := setup("gitmoji_index")
 	ja := jsonassert.New(t)
 
 	ja.Assertf(getGitmojiList(client), `{"gitmojis": "<<PRESENCE>>"}`)
@@ -33,8 +33,8 @@ func Test_getGitmojiList(t *testing.T) {
 }
 
 func Test_parseGitmoji(t *testing.T) {
-	client, vcr := setup("get_gitmoji")
-	_, err := parseGitmoji(getGitmojiList(client))
+	client, vcr := setup("gitmoji_index")
+	_, err := toMap(getGitmojiList(client))
 	if err != nil {
 		t.Error(err)
 	}

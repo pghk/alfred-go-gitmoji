@@ -8,13 +8,23 @@ import (
 	"os"
 )
 
-var wf *aw.Workflow
-
-func init() {
-	wf = aw.New()
+func BuildItem(gi *Gitmoji, wf *aw.Workflow, client *http.Client) *aw.Item {
+	err := preloadIcon(gi, wf, client)
+	if err != nil {
+		return nil
+	}
+	return wf.NewItem(gi.Description).
+		Autocomplete(gi.Description).
+		Match(gi.Name + " " + gi.Description).
+		Subtitle(gi.Code).
+		Arg(gi.Emoji).
+		Icon(&aw.Icon{
+			Value: wf.CacheDir() + "/" + gi.iconName(),
+		}).
+		Valid(true)
 }
 
-func loadIcon(gitmoji *Gitmoji, client *http.Client) error {
+func preloadIcon(gitmoji *Gitmoji, wf *aw.Workflow, client *http.Client) error {
 	fileName := gitmoji.iconName()
 	if wf.Cache.Exists(fileName) {
 		return nil
@@ -37,23 +47,10 @@ func loadIcon(gitmoji *Gitmoji, client *http.Client) error {
 	defer func(file *os.File) {
 		err := file.Close()
 		if err != nil {
-
+			log.Fatalln(err)
 		}
 	}(file)
 
 	_, err = io.Copy(file, resp.Body)
 	return err
-}
-
-func item(gi *Gitmoji) *aw.Item {
-	return wf.NewItem(gi.Description).
-		Autocomplete(gi.Description).
-		Match(gi.Name + " " + gi.Description).
-		Subtitle(gi.Code).
-		Arg(gi.Emoji).
-		Icon(&aw.Icon{
-			Value: wf.CacheDir() + "/" + gi.iconName(),
-			Type:  aw.IconTypeFileIcon,
-		}).
-		Valid(true)
 }
