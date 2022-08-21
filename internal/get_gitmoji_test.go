@@ -1,8 +1,8 @@
 package internal
 
 import (
-	"github.com/dnaeon/go-vcr/v2/recorder"
 	"github.com/kinbiko/jsonassert"
+	"gopkg.in/dnaeon/go-vcr.v3/recorder"
 	"log"
 	"net/http"
 	"testing"
