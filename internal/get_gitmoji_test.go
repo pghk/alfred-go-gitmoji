@@ -27,7 +27,10 @@ func Test_getGitmojiList(t *testing.T) {
 	client, vcr := setup("gitmoji_index")
 	ja := jsonassert.New(t)
 
-	ja.Assertf(getGitmojiList(client), `{"gitmojis": "<<PRESENCE>>"}`)
+	ja.Assertf(getGitmojiList(client), `{
+		"$schema": "<<PRESENCE>>",
+		"gitmojis": "<<PRESENCE>>"
+	}`)
 
 	teardown(vcr)
 }

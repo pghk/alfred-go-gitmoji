@@ -125,12 +125,14 @@ interactions:
                 - default-src 'none'; style-src 'unsafe-inline'; sandbox
             Content-Type:
                 - image/png
+            Cross-Origin-Resource-Policy:
+                - cross-origin
             Date:
-                - Sun, 21 Aug 2022 06:01:19 GMT
+                - Sat, 29 Jul 2023 05:19:23 GMT
             Etag:
                 - W/"80e9e1a6e00d6aae9bec0e4339edda13344eeffff2ca5b1ff9eda4beb010aa11"
             Expires:
-                - Sun, 21 Aug 2022 06:06:19 GMT
+                - Sat, 29 Jul 2023 05:24:23 GMT
             Source-Age:
                 - "0"
             Strict-Transport-Security:
@@ -140,23 +142,23 @@ interactions:
             Via:
                 - 1.1 varnish
             X-Cache:
-                - MISS
+                - HIT
             X-Cache-Hits:
-                - "0"
+                - "1"
             X-Content-Type-Options:
                 - nosniff
             X-Fastly-Request-Id:
-                - 9f8ece0350d30ecfea83820eea2e1a82e79ddf97
+                - ee153e2d1f6611eb74bd0c5e4c9f2bf01380dfac
             X-Frame-Options:
                 - deny
             X-Github-Request-Id:
-                - 12A4:45F9:BC6902:F8BF58:6301CA2F
+                - B0FA:3472:AADC5:CF575:64C4A022
             X-Served-By:
-                - cache-bos4667-BOS
+                - cache-bos4626-BOS
             X-Timer:
-                - S1661061680.519833,VS0,VE119
+                - S1690607964.545025,VS0,VE76
             X-Xss-Protection:
                 - 1; mode=block
         status: 200 OK
         code: 200
-        duration: 140.536808ms
+        duration: 98.157021ms

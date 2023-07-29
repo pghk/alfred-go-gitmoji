@@ -11,14 +11,17 @@ import (
 )
 
 const GithubUrl string = "https://raw.githubusercontent.com"
-const GitmojiIndex string = "carloscuesta/gitmoji/master/src/data/gitmojis.json"
+const GitmojiUrl string = "carloscuesta/gitmoji/master/packages/gitmojis/src/gitmojis.json"
 const IconLibrary string = "joypixels/emoji-assets/master/png/128/"
 
-func GetGitmoji(client *http.Client) (map[string][]Gitmoji, error) {
+func GetGitmoji(client *http.Client) ([]Gitmoji, error) {
 	gitmojiJson := getGitmojiList(client)
 	return toMap(gitmojiJson)
 }
 
+type GitmojiIndex struct {
+	Gitmojis []Gitmoji `json:"gitmojis"`
+}
 type Gitmoji struct {
 	Emoji       string      `json:"emoji"`
 	Entity      string      `json:"entity"`
@@ -28,10 +31,10 @@ type Gitmoji struct {
 	Semver      interface{} `json:"semver"`
 }
 
-func toMap(input string) (map[string][]Gitmoji, error) {
-	test := map[string][]Gitmoji{}
-	err := json.Unmarshal([]byte(input), &test)
-	return test, err
+func toMap(input string) ([]Gitmoji, error) {
+	var index GitmojiIndex
+	err := json.Unmarshal([]byte(input), &index)
+	return index.Gitmojis, err
 }
 
 // iconName derives PNG filenames from emoji, according to the convention used by JoyPixels in their repository
@@ -57,7 +60,7 @@ func (g *Gitmoji) iconFile() string {
 }
 
 func getGitmojiList(client *http.Client) string {
-	resp, err := client.Get(GithubUrl + "/" + GitmojiIndex)
+	resp, err := client.Get(GithubUrl + "/" + GitmojiUrl)
 	if err != nil {
 		log.Fatalln(err)
 	}
