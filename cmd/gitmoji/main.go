@@ -43,7 +43,7 @@ func run() {
 
 	log.Printf("[main] query=%s", query)
 
-	cacheData := map[string][]internal.Gitmoji{}
+	cacheData := []internal.Gitmoji{}
 	if wf.Cache.Exists(cacheName) {
 		if err := wf.Cache.LoadJSON(cacheName, &cacheData); err != nil {
 			wf.FatalError(err)
@@ -67,12 +67,7 @@ func run() {
 		}
 	}
 
-	gitmojidex, cacheOk := cacheData["gitmojis"]
-	if !cacheOk {
-		wf.Fatal("Error parsing cached gitmoji index")
-	}
-
-	for _, gitmoji := range gitmojidex {
+	for _, gitmoji := range cacheData {
 		internal.BuildItem(&gitmoji, wf, client)
 	}
 
